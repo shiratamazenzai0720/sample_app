@@ -1,4 +1,4 @@
-class ListController < ApplicationController
+class ListsController < ApplicationController
   def new
     @list = List.new
   end
@@ -10,6 +10,7 @@ class ListController < ApplicationController
   end
 
   def index
+    @lists = List.all
   end
 
   def show
